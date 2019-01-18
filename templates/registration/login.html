@@ -1,0 +1,9 @@
+{% extends '../navbar.html' %}
+{% block content %}
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Login</button>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+</form>
+{% endblock %}

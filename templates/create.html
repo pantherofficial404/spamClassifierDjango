@@ -1,0 +1,10 @@
+{% load static %}
+
+{% block content %}
+<form action="{% url 'requestForm' %}" method="POST">
+    {% csrf_token %}
+    {{form.title}}
+    {{form.context}}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% load static %}
+
+{% block content %}
+<h1>This is Edit Page</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Update</button>
+</form>
+{% endblock %}
